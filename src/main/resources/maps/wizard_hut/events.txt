@@ -1,0 +1,1 @@
+teleport, 20, 28, Starting_village, 14, 9, false

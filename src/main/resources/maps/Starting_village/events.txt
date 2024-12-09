@@ -1,0 +1,2 @@
+teleport, 14, 9, wizard_hut, 20, 28, true
+restPoint, 20, 20
