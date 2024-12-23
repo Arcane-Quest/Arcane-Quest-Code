@@ -1,3 +1,5 @@
+Made off of Ryi Snow's template game youtube.com/@RyiSnow (Heavily modified)
+
 # Important
 > [!WARNING]
 > This repository is unfinished and may contain buggy code.
