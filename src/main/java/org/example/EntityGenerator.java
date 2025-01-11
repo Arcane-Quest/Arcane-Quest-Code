@@ -22,6 +22,9 @@ public class EntityGenerator {
             case MON_Orc.objIDName:
                 monster = new MON_Orc(gp);
                 break;
+            case MON_Goose.objIDName:
+                monster = new MON_Goose(gp);
+                break;
         }
         return monster;
     }

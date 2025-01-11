@@ -73,10 +73,6 @@ public class TileManager {
 
     public void loadNPCs(String path, int mapIndex) throws IOException {
 
-        if (!(new File(path).exists())) {
-            return;
-        }
-
         // clear all previous npcs
         for (int i = 0; i < gp.npc[1].length; i++) {
             gp.npc[gp.currentMap][i] = null;

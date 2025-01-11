@@ -106,8 +106,6 @@ public class Gamepanel extends JPanel implements Runnable {
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
-
-        playSound(0);
     }
 
     @Override

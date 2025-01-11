@@ -11,11 +11,12 @@ public class MON_Goose extends Entity{
     // peace was never an option
 
     Gamepanel gp;
+    public static final String objIDName = "MON_Goose";
 
     public MON_Goose(Gamepanel gp) {
         super(gp);
         this.gp = gp; // THIS IS NEEDED, it crashes otherwise
-        name = "Goose";
+        name = objIDName;
         type = Entity.EntityType.MONSTER;
         attack = 1;
         defense = 0;
