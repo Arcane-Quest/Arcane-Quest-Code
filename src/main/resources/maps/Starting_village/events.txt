@@ -1,2 +1,2 @@
-teleport, 14, 9, wizard_hut, 20, 28, true
+teleport, 14, 9, crypt_of_the_goose, 20, 28, true
 restPoint, 20, 20

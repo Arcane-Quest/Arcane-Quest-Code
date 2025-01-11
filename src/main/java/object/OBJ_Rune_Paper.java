@@ -12,7 +12,6 @@ public class OBJ_Rune_Paper extends Entity {
     public int cooldownTime = 2;
 
     Gamepanel gp;
-    String projectilename;
     public Projectile spellObject;
     public OBJ_Rune_Paper(Gamepanel gp) {
         super(gp);
@@ -25,6 +24,7 @@ public class OBJ_Rune_Paper extends Entity {
     }
 
     public void entitySetup(int spellNum) {
+        var projectilename = "";
         switch (spellNum) {
             case 1:
                 down1 = setup("/objects/Rune_paper1", gp.tilesize, gp.tilesize);
@@ -58,7 +58,7 @@ public class OBJ_Rune_Paper extends Entity {
 
     public boolean loadfromsaveabledata() {
         if(saveableData != null) {
-            this.projectilename = (String) saveableData.loadTrait("projectile");
+            this.projectile = (Projectile) gp.entityGenerator.getObjectFromString((String) saveableData.loadTrait("projectile"));
             this.description = (String) saveableData.loadTrait("description");
             this.sellable = (boolean) saveableData.loadTrait("sellable");
         }
@@ -66,21 +66,19 @@ public class OBJ_Rune_Paper extends Entity {
     }
 
     public Projectile shoot(Entity user) {
-        if(projectilename != null) {
+        if (spellObject != null && spellObject.hasResource(user)) {
+            var tmpObj = (Projectile) gp.entityGenerator.getObjectFromString(spellObject.name);
+            tmpObj.set(user.worldX, user.worldY, user.direction, true, user);
+            tmpObj.completeResourceTransaction(user);
 
-            if (projectilename != null && spellObject.hasResource(user)) {
-                spellObject.set(user.worldX, user.worldY, user.direction, true, user);
-                spellObject.completeResourceTransaction(user);
-
-                // add it to the list
-                for (int i = 0; i < gp.projectile[1].length; i++) {
-                    if (gp.projectile[gp.currentMap][i] == null) {
-                        gp.projectile[gp.currentMap][i] = spellObject;
-                        break;
-                    }
+            // add it to the list
+            for (int i = 0; i < gp.projectile[1].length; i++) {
+                if (gp.projectile[gp.currentMap][i] == null) {
+                    gp.projectile[gp.currentMap][i] = tmpObj;
+                    break;
                 }
-                return spellObject;
             }
+            return tmpObj;
         }
         return null;
     }
