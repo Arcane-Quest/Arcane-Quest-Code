@@ -127,7 +127,7 @@ public class UI {
         g2.getFont().deriveFont(23f);
 
         int toolTipX = getXforCenteredText(currentToolTip);
-        int toolTipY = 11*gp.tilesize;
+        int toolTipY = 9*gp.tilesize;
 
         g2.setColor(Color.black);
         g2.drawString(currentToolTip, toolTipX+2, toolTipY+2);
