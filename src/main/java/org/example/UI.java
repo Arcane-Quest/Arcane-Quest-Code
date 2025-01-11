@@ -15,6 +15,8 @@ public class UI {
     Graphics2D g2;
     Font pressStart2P;
     Color fontColor;
+    Color spellColorBorder = new Color(217, 152, 0, 210);
+    Color spellColorInside = new Color(35, 35, 35, 215);
     public boolean messageShowing = false;
     ArrayList<String> message = new ArrayList<>();
     ArrayList<Integer> messageCounter = new ArrayList<>();
@@ -70,7 +72,7 @@ public class UI {
         g2.setColor(Color.WHITE);
 
         switch (gp.gameState) {
-            case ACTIVE: drawPlayerLife(); drawMessage(); drawTooltips();   break;
+            case ACTIVE: drawPlayerLife(); drawMessage(); drawTooltips(); drawSpells();  break;
             case PAUSED: drawPlayerLife(); drawPauseScreen();               break;
             case DIALOGUE:
                 drawPlayerLife();
@@ -86,6 +88,28 @@ public class UI {
             case TELEPORT: teleport();                                      break;
             case TRADING: drawTradeScreen(); break;
             case OPTIONS: drawOptionsScreen(); break;
+        }
+    }
+
+    public void drawSpells() {
+        var y = gp.screenHeight-100;
+        var x = 100;
+        var distance = 70;
+        var height = 50;
+        var width = 50;
+
+        for (int i = 0; i < gp.player.spells.length; i++) {
+            g2.setColor(spellColorBorder);
+            g2.fillRect(x-5, y-5, height+10, width+10);
+            g2.setColor(spellColorInside);
+            g2.fillRect(x, y, height, width);
+            if (gp.player.spells[i] != null && gp.player.spells[i].spellObject.down1 != null) {
+                g2.drawImage(gp.player.spells[i].spellObject.down1, x, y, width, height, null);
+            }
+            g2.setColor(Color.WHITE);
+            g2.drawString(Integer.toString(i), x, y+55);
+
+            x += distance;
         }
     }
 

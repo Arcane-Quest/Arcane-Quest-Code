@@ -37,7 +37,7 @@ public class Main {
     public static void checkForUpdate() throws URISyntaxException, IOException {
         if(true) { //FIXME: actually see version etc.
             if(JOptionPane.showConfirmDialog(null, "Redirect to update instructions?",
-                    "Update Availible!", JOptionPane.YES_NO_OPTION) == 0) {
+                    "Update Available!", JOptionPane.YES_NO_OPTION) == 0) {
                 // they answered yes (0 = yes)
 
                 if(Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {

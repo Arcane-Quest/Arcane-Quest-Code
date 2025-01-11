@@ -41,6 +41,8 @@ public class Player extends Entity {
 
         xp = 20;
         spells = new OBJ_Rune_Paper[10];
+        spells[0] = new OBJ_Rune_Paper(gp);
+        spells[0].entitySetup(1);
     }
 
     public void restoreStatus() {
@@ -109,6 +111,7 @@ public class Player extends Entity {
         inventory.add(new OBJ_Lantern(gp));
 
         inventory.add(new OBJ_Ability_focus_crystal(gp));
+
 
     }
 

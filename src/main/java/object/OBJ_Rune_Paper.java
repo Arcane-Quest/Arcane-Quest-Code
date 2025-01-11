@@ -13,6 +13,7 @@ public class OBJ_Rune_Paper extends Entity {
 
     Gamepanel gp;
     String projectilename;
+    public Projectile spellObject;
     public OBJ_Rune_Paper(Gamepanel gp) {
         super(gp);
         this.name = objIDName;
@@ -32,6 +33,7 @@ public class OBJ_Rune_Paper extends Entity {
                 saveableData.saveTrait("projectile", projectilename);
                 saveableData.saveTrait("sellable", sellable);
                 saveableData.saveTrait("description", description);
+                spellObject = (Projectile) gp.entityGenerator.getObjectFromString(projectilename);
                 break;
             case 2:
                 break;
@@ -65,7 +67,7 @@ public class OBJ_Rune_Paper extends Entity {
 
     public Projectile shoot(Entity user) {
         if(projectilename != null) {
-            Projectile spellObject = (Projectile) gp.entityGenerator.getObjectFromString(projectilename);
+
             if (projectilename != null && spellObject.hasResource(user)) {
                 spellObject.set(user.worldX, user.worldY, user.direction, true, user);
                 spellObject.completeResourceTransaction(user);

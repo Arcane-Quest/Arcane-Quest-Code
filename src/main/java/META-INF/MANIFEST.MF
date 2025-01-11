@@ -1,3 +1,4 @@
 Manifest-Version: 1.0
 Main-Class: org.example.Main
+Class-Path: /Users/Ryu/Arcane Quest/src/main/java/org.example/Main
 
