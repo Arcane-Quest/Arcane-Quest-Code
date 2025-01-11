@@ -25,6 +25,7 @@ public class OBJ_Fireball extends Projectile {
         alive = false;
         getImage();
         knockBackPower = 2;
+        useSound = 1;
     }
 
 

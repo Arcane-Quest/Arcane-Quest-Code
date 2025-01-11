@@ -8,7 +8,6 @@ public class OBJ_Sword extends Entity {
 
     public OBJ_Sword(Gamepanel gp) {
         super(gp);
-
         name = objIDName;
         rarityLevel = rarity.NORMAL;
         description = "[" + name + "]\n" + "Certainly not a\nblade of legend";

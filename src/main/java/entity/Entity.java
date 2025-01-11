@@ -14,6 +14,7 @@ import java.util.Random;
 public class Entity {
     public Entity contents;
     public Boolean opened = false;
+    public int useSound;
 
     public boolean canBreakRock = false;
     Gamepanel gp;
@@ -802,7 +803,6 @@ public class Entity {
                 }
             } else {
                 gp.player.damageMonster(monsterIndex, attack, currentWeapon.knockBackPower, this);
-
                 int iTileIndex = gp.cChecker.checkEntity(this, gp.interactiveTile);
                 gp.player.damageInteractiveTile(iTileIndex);
 

@@ -70,7 +70,7 @@ public class OBJ_Rune_Paper extends Entity {
             var tmpObj = (Projectile) gp.entityGenerator.getObjectFromString(spellObject.name);
             tmpObj.set(user.worldX, user.worldY, user.direction, true, user);
             tmpObj.completeResourceTransaction(user);
-            gp.playSound(1);
+            gp.playSound(tmpObj.useSound);
 
             // add it to the list
             for (int i = 0; i < gp.projectile[1].length; i++) {
