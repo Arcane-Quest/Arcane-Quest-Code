@@ -38,6 +38,8 @@ public class Gamepanel extends JPanel implements Runnable {
     public ArrayList<Entity> particleList = new ArrayList<>();
     ArrayList<Entity> entityList = new ArrayList<>();
     public boolean saveDataExists = false;
+    public Sound music = new Sound();
+    public Sound soundEffects = new Sound();
 
     // screen ratio 4:3
     //FPS
@@ -104,6 +106,8 @@ public class Gamepanel extends JPanel implements Runnable {
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
+
+        playSound(0);
     }
 
     @Override
@@ -292,4 +296,19 @@ public class Gamepanel extends JPanel implements Runnable {
 
         }
 
+        public void playMusic(int i) {
+            music.stop();
+            music.setFile(i);
+            music.play();
+            music.loop();
+        }
+
+        public void stopMusic() {
+            music.stop();
+        }
+
+        public void playSound(int i) {
+            soundEffects.setFile(i);
+            soundEffects.play();
+        }
     }
