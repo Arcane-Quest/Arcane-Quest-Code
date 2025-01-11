@@ -10,6 +10,7 @@ public class Projectile extends Entity{
     public Projectile(Gamepanel gp) {
         super(gp);
     }
+    public int useSound;
 
     public void set(int worldX, int worldY, String direction, boolean alive, Entity user) {
         this.worldX = worldX;

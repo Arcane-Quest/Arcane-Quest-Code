@@ -11,9 +11,7 @@ public class Sound {
 
     public Sound() {
         sounds[0] = getClass().getResource("/sounds/test.wav");
-        if (sounds[0] == null) {
-            System.out.println("Sound not found");
-        }
+        sounds[1] = getClass().getResource("/sounds/fireball.wav");
     }
 
     public void setFile(int i) {
@@ -27,7 +25,10 @@ public class Sound {
     }
 
     public void play() {
-        clip.start();
+        var soundthread = new Thread(() -> {
+            clip.start();
+        });
+        soundthread.start();
     }
     public void loop() {
         clip.loop(Clip.LOOP_CONTINUOUSLY);
