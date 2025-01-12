@@ -11,11 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3cfc6834-8882-4205-9715-4c961fd3bc56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/monster/MON_Goose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/monster/MON_Goose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EntityGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EntityGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Gamepanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Gamepanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tile/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/Starting_village/npcs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/Starting_village/npcs.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +74,7 @@
     &quot;Application.Game.executor&quot;: &quot;Run&quot;,
     &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Arcane Quest [:network.Client.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Arcane Quest [:network.Server.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Arcane Quest [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build Arcane Quest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
@@ -202,6 +198,8 @@
       <workItem from="1736495738664" duration="6376000" />
       <workItem from="1736554294967" duration="13660000" />
       <workItem from="1736572283847" duration="2000" />
+      <workItem from="1736572540040" duration="2640000" />
+      <workItem from="1736580302223" duration="812000" />
     </task>
     <servers />
   </component>
