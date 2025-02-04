@@ -38,7 +38,7 @@ public class TileManager {
             setup(2, "water1", true);
             setup(3, "path", false);
             setup(4, "dungeon_floor", false);
-            setup(5, "tree", true);
+            setup(5, "mountain", true);
             setup(6, "tree", true);
             setup(7, "black_tile", true);
             setup(9, "debug_texture", false);

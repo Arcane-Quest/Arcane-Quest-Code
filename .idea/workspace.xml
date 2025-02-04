@@ -11,6 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3cfc6834-8882-4205-9715-4c961fd3bc56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/Starting_village/locations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/Starting_village/locations.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +202,14 @@
       <workItem from="1736572283847" duration="2000" />
       <workItem from="1736572540040" duration="2640000" />
       <workItem from="1736580302223" duration="812000" />
+      <workItem from="1736652926268" duration="52000" />
+      <workItem from="1736657885703" duration="3818000" />
+      <workItem from="1736667886601" duration="1514000" />
+      <workItem from="1736679546662" duration="1144000" />
+      <workItem from="1736745428668" duration="3923000" />
+      <workItem from="1736823870047" duration="40000" />
+      <workItem from="1737937239756" duration="6000" />
+      <workItem from="1738655646840" duration="2754000" />
     </task>
     <servers />
   </component>
